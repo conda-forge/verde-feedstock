@@ -1,5 +1,5 @@
 {% set name = "verde" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9cf26255a7a0639ea10181331b9e5b0e17b380edabb9d0aa9df16df4d92503f7
+  sha256: 8217fdd75eb49d00bda31e99a2851e379faa180b71a3c110ae6d7717c00be21a
 
 build:
   noarch: python
@@ -50,8 +50,7 @@ about:
     data on a regular grid (or in a scatter, a profile, as derivatives).
     The models are Green's functions from (mostly) elastic deformation theory.
     This approach is very similar to *machine learning* so we implement gridder
-    classes that are similar to `scikit-learn <http://scikit-learn.org/>`__
-    regression classes.
+    classes that are similar to scikit-learn regression classes.
     The API is not 100% compatible but it should look familiar to those with some
     scikit-learn experience.
   doc_url: https://www.fatiando.org/verde
