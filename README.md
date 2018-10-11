@@ -16,8 +16,7 @@ A linear model is estimated based on the input data and then used to predict
 data on a regular grid (or in a scatter, a profile, as derivatives).
 The models are Green's functions from (mostly) elastic deformation theory.
 This approach is very similar to *machine learning* so we implement gridder
-classes that are similar to `scikit-learn <http://scikit-learn.org/>`__
-regression classes.
+classes that are similar to scikit-learn regression classes.
 The API is not 100% compatible but it should look familiar to those with some
 scikit-learn experience.
 
