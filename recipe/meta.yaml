@@ -1,5 +1,5 @@
 {% set name = "verde" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0e52178aa528b0bc464331a2fa029f21f7edc037a555fc49cbdd621094b9ff4
+  sha256: 1563a291008efee9e2d9005804072aeb467924fd6981bd4323d9da9a304db454
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -42,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: "Processing and gridding spatial data using Green's functions"
+  summary: Processing and gridding spatial data using Green's functions
   description: |
     Verde is a Python library for processing spatial data (bathymetry, geophysics
     surveys, etc) and interpolating it on regular grids (i.e., *gridding*).
