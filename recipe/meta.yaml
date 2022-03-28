@@ -1,5 +1,5 @@
 {% set name = "verde" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f82a149a3a13ccd60227840cdc9d93a23b8faeb44308d7c447554bd0452698cb
+  sha256: 832faad9ba18094bd928c2ca03853c337f9844b609b50afc0e09715e59f796b3
 
 build:
   noarch: python
