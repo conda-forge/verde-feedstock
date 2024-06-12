@@ -7,22 +7,20 @@ Home: http://github.com/fatiando/verde
 
 Package license: BSD-3-Clause
 
-Summary: Processing and gridding spatial data using Green's functions
+Summary: Processing and gridding spatial data, machine-learning style
 
 Development: https://github.com/fatiando/verde
 
 Documentation: https://www.fatiando.org/verde
 
-Verde is a Python library for processing spatial data (bathymetry, geophysics
-surveys, etc) and interpolating it on regular grids (i.e., *gridding*).
-Most gridding methods in Verde use a Green's functions approach.
-A linear model is estimated based on the input data and then used to predict
-data on a regular grid (or in a scatter, a profile, as derivatives).
-The models are Green's functions from (mostly) elastic deformation theory.
-This approach is very similar to *machine learning* so we implement gridder
-classes that are similar to scikit-learn regression classes.
-The API is not 100% compatible but it should look familiar to those with some
-scikit-learn experience.
+Verde is a Python library for processing spatial data (topography,
+point clouds, bathymetry, geophysics surveys, etc) and interpolating
+them on a 2D surface (i.e., gridding) with a hint of machine learning.
+Our core interpolation methods are inspired by machine-learning. As
+such, Verde implements an interface that is similar to the popular
+scikit-learn library. We also provide other analysis methods that are
+often used in combination with gridding, like trend removal,
+blocked/windowed operations, cross-validation, and more!
 
 
 Current build status
@@ -111,7 +109,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
