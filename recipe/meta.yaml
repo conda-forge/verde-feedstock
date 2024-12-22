@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e97a55ceecb1a4bbc6ad09232738cce95b6c93d82d514b9f64dea14ded505ec3
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy >=1.23
     - scipy >=1.8
     - pandas >=1.4
@@ -33,6 +33,7 @@ test:
   requires:
     - pytest
     - pyproj
+    - python {{ python_min }}
   imports:
     - verde
   commands:
